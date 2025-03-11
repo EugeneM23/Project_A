@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using Zenject;
 
-namespace Code.Infrastructure.GameMachine
+namespace Game.Code.Infrastructure.GameMachine
 {
     public class SceneLoader
     {

@@ -1,14 +1,16 @@
+using Game.Code.GameLogick;
+using Game.Code.Infrastructure.GameFactory;
 using UnityEngine;
 using Zenject;
 
-namespace Code.Infrastructure.GameMachine
+namespace Game.Code.Infrastructure.GameMachine
 {
     public class LoadLevelState : IPayLoadState<string>
     {
         DiContainer container;
         private readonly LazyInject<GameStateMachine> _stateMachine;
         private readonly SceneLoader _sceneLoader;
-        private UnitSpawner _unitSpawner;
+        private PrefabSpawner _prefabSpawner;
 
         public LoadLevelState(LazyInject<GameStateMachine> stateMachine,
             SceneLoader sceneLoader, DiContainer container)
@@ -25,13 +27,25 @@ namespace Code.Infrastructure.GameMachine
 
         private void OnLoaded()
         {
-            //_unitSpawner = container.Resolve<UnitSpawner>();
-            var unitFactory = Object.FindAnyObjectByType<UnitSpawner>();
+            PrefabSpawner unitFactory = Object.FindAnyObjectByType<PrefabSpawner>();
+            Vector3 playerSpawnPoint = Object.FindAnyObjectByType<PlayerSpawnPoint>().transform.position;
 
             if (unitFactory != null)
-                unitFactory.SpawnPlayer();
+            {
+                Transform player = unitFactory.SpawnPlayer(at: playerSpawnPoint);
+
+                SetCameraTarget(player);
+
+                unitFactory.SpawnHUD();
+                unitFactory.SpawnEnemys();
+            }
 
             Debug.Log("Loading level");
+        }
+
+        private static void SetCameraTarget(Transform player)
+        {
+            Camera.main.GetComponent<CameraFolow>().SetTarget(player.transform);
         }
 
         public void Exit()

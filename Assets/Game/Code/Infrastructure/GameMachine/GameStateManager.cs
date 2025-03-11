@@ -1,7 +1,6 @@
-using Code.Infrastructure.GameMachine;
 using Zenject;
 
-namespace Code.Infrastructure
+namespace Game.Code.Infrastructure.GameMachine
 {
     public class GameStateManager : IInitializable
     {

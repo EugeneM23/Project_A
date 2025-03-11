@@ -1,9 +1,6 @@
-using System;
-using Code.FactoryPrefab;
 using UnityEngine;
-using Zenject;
 
-namespace Code
+namespace Game.Code.GameLogick
 {
     public class CameraFolow : MonoBehaviour
     {

@@ -1,8 +1,8 @@
-using Code.Infrastructure.GameMachine;
-using Code.Infrastructure.Services;
+using Game.Code.Infrastructure.GameMachine;
+using Game.Code.Infrastructure.Services;
 using Zenject;
 
-namespace Code.Infrastructure.Installers
+namespace Game.Code.Infrastructure.Installers
 {
     public class GameStateMachineInstaller : MonoInstaller
     {

@@ -1,8 +1,8 @@
-using Code.Infrastructure.Services;
+using Game.Code.Infrastructure.Services;
 using UnityEngine;
 using Zenject;
 
-namespace Code.Player
+namespace Game.Code.GameLogick
 {
     public class Player : MonoBehaviour
     {
@@ -41,6 +41,10 @@ namespace Code.Player
             var targetRotation = Quaternion.LookRotation(movementVector);
 
             transform.rotation = Quaternion.Slerp(transform.rotation, targetRotation, Time.deltaTime * _rotationSpeed);
+        }
+        
+        public class Factory : PlaceholderFactory<UnityEngine.Object, Player>
+        {
         }
     }
 }

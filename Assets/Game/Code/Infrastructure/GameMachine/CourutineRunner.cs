@@ -1,9 +1,7 @@
-using System;
 using System.Collections;
-using Code.Infrastructure.GameMachine;
 using UnityEngine;
 
-namespace Code.Infrastructure
+namespace Game.Code.Infrastructure.GameMachine
 {
     public class CoroutineRunner : MonoBehaviour, ICoroutineRunner
     {

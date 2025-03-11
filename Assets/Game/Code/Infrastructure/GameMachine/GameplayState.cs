@@ -1,7 +1,7 @@
 using UnityEngine;
 using Zenject;
 
-namespace Code.Infrastructure.GameMachine
+namespace Game.Code.Infrastructure.GameMachine
 {
     public class GameplayState : IState
     {
