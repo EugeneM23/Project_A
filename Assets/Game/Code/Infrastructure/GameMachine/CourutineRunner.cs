@@ -5,6 +5,9 @@ namespace Game.Code.Infrastructure.GameMachine
 {
     public class CoroutineRunner : MonoBehaviour, ICoroutineRunner
     {
-        public void StartRoutine(IEnumerator load) => StartCoroutine(load);
+        public void StartRoutine(IEnumerator load)
+        {
+            StartCoroutine(load);
+        }
     }
 }

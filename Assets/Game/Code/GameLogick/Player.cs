@@ -1,3 +1,4 @@
+using Game.Code.Infrastructure.GameMachine;
 using Game.Code.Infrastructure.Services;
 using UnityEngine;
 using Zenject;
@@ -42,7 +43,7 @@ namespace Game.Code.GameLogick
 
             transform.rotation = Quaternion.Slerp(transform.rotation, targetRotation, Time.deltaTime * _rotationSpeed);
         }
-        
+
         public class Factory : PlaceholderFactory<UnityEngine.Object, Player>
         {
         }

@@ -92,3 +92,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _playerPrefab: {fileID: 203301824125480033, guid: 7958287ea713140d4b1ebdc5ed838631, type: 3}
   _HUD: {fileID: 8449862065400044760, guid: c1d5d67785706419a9ef0c5e9ad1a24a, type: 3}
+  _enemyPrefabs:
+  - {fileID: 4003032098876693947, guid: 6b28d622bece84435a50046dfbb08d25, type: 3}
+  - {fileID: 4003032098876693947, guid: 6b28d622bece84435a50046dfbb08d25, type: 3}
+  - {fileID: 4003032098876693947, guid: 6b28d622bece84435a50046dfbb08d25, type: 3}
+  - {fileID: 4274516151742573115, guid: ec3b444a0c4b846c6b9c3cd66e80ed9a, type: 3}
+  - {fileID: 4274516151742573115, guid: ec3b444a0c4b846c6b9c3cd66e80ed9a, type: 3}
+  - {fileID: 4274516151742573115, guid: ec3b444a0c4b846c6b9c3cd66e80ed9a, type: 3}

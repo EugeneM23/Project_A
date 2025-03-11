@@ -28,7 +28,7 @@ namespace Game.Code.Infrastructure.GameMachine
                 yield break;
             }
 
-            AsyncOperation operation = SceneManager.LoadSceneAsync(levelName);
+            AsyncOperation operation = SceneManager.LoadSceneAsync(levelName, LoadSceneMode.Single);
 
             while (operation.isDone == false)
             {

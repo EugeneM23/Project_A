@@ -1,6 +1,7 @@
 using Game.Code.GameLogick;
 using Game.Code.Infrastructure.GameFactory;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using Zenject;
 
 namespace Game.Code.Infrastructure.GameMachine

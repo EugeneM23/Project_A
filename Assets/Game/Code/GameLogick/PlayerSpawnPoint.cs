@@ -9,7 +9,7 @@ namespace Game.Code.Infrastructure.GameMachine
         private void OnDrawGizmos()
         {
             Gizmos.color = Color.green;
-            Gizmos.DrawWireCube(transform.position, new Vector3(1, 1, 1));
+            Gizmos.DrawWireCube(transform.position, new Vector3(2f, 0.3f, 2f));
         }
     }
 }
