@@ -21,6 +21,5 @@ namespace Code.Infrastructure.GameMachine
         {
             Debug.Log("Exiting Gameplay State");
         }
-
     }
 }

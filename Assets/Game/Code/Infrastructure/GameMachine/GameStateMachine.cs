@@ -14,24 +14,24 @@ namespace Code.Infrastructure.GameMachine
             _states = states.ToDictionary(state => state.GetType(), state => state);
         }
 
-        public void SetState<T>() where T : class, IState
+        public void SetState<TState>() where TState : class, IState
         {
-            if (_currentState == typeof(T)) return;
-
-            _currentState?.Exit();
-            IState state = _states[typeof(T)] as T;
-            _currentState = state;
+            TState state = ChangeState<TState>();
             state.Enter();
         }
 
-        public void SetState<T, PayLoad>(PayLoad payLoad) where T : class, IPayLoadState<PayLoad>
+        public void SetState<TState, PayLoad>(PayLoad payLoad) where TState : class, IPayLoadState<PayLoad>
         {
-            if (_currentState == typeof(T)) return;
-
-            _currentState?.Exit();
-            IPayLoadState<PayLoad> state = _states[typeof(T)] as T;
-            _currentState = state;
+            TState state = ChangeState<TState>();
             state.Enter(payLoad);
+        }
+
+        private TState ChangeState<TState>() where TState : class, IBaseState
+        {
+            _currentState?.Exit();
+            TState state = _states[typeof(TState)] as TState;
+            _currentState = state;
+            return state;
         }
     }
 }
