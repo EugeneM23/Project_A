@@ -27,6 +27,6 @@ namespace Game.Code.Infrastructure.GameMachine
             LoadLevel(level);
         }
 
-        public void LoadLevel(string sceneName) => _stateMachine.Value.SetState<LoadLevelState, string>(sceneName);
+        public void LoadLevel(string sceneName) => _stateMachine.Value.SetState<LoadProgressState, string>(sceneName);
     }
 }

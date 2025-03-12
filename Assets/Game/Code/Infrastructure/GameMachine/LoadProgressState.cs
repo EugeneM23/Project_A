@@ -1,16 +1,19 @@
 using Game.Code.GameLogick;
 using Game.Code.Infrastructure.GameFactory;
+using Game.Code.Infrastructure.Services;
 using UnityEngine;
 
 namespace Game.Code.Infrastructure.GameMachine
 {
-    /*public class LoadProgressState : IPayLoadState<string>
+    public class LoadProgressState : IPayLoadState<string>
     {
         private readonly SceneLoader _sceneLoader;
+        private readonly PlayerProgressService _playerProgressService;
 
-        public LoadProgressState(SceneLoader sceneLoader)
+        public LoadProgressState(SceneLoader sceneLoader, PlayerProgressService playerProgressService)
         {
             _sceneLoader = sceneLoader;
+            _playerProgressService = playerProgressService;
         }
 
         public void Enter(string scene)
@@ -21,11 +24,11 @@ namespace Game.Code.Infrastructure.GameMachine
         private void OnLoaded()
         {
             PrefabSpawner unitFactory = Object.FindAnyObjectByType<PrefabSpawner>();
-            Vector3 playerSpawnPoint = Object.FindAnyObjectByType<PlayerSpawnPoint>().transform.position;
+            PlayerData playerData = _playerProgressService.Load();
 
             if (unitFactory != null)
             {
-                Transform player = unitFactory.SpawnPlayer(at: playerSpawnPoint);
+                Transform player = unitFactory.SpawnPlayer(at: playerData.PositionOnlevel);
 
                 SetCameraTarget(player);
 
@@ -42,5 +45,5 @@ namespace Game.Code.Infrastructure.GameMachine
         public void Exit()
         {
         }
-    }*/
+    }
 }

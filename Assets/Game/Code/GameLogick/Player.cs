@@ -32,14 +32,7 @@ namespace Game.Code.GameLogick
 
         private void Update()
         {
-            if (Input.GetKeyDown(KeyCode.V)) SaveProgress();
-
-            if (Input.GetKeyDown(KeyCode.C)) LoadProgress();
-
-            if (Input.GetKeyDown(KeyCode.B))
-            {
-                _playerProgressService.Delete();
-            }
+            TestSaveLoad();
 
             var movementVector = Vector3.zero;
             if (_inputService.Axis.sqrMagnitude > 0)
@@ -53,6 +46,18 @@ namespace Game.Code.GameLogick
             movementVector += Physics.gravity;
 
             _controller.Move(_speed * movementVector * Time.deltaTime);
+        }
+
+        private void TestSaveLoad()
+        {
+            if (Input.GetKeyDown(KeyCode.V)) SaveProgress();
+
+            if (Input.GetKeyDown(KeyCode.C)) LoadProgress();
+
+            if (Input.GetKeyDown(KeyCode.B))
+            {
+                _playerProgressService.Delete();
+            }
         }
 
         private void RotateTowards(Vector3 movementVector)
@@ -74,7 +79,7 @@ namespace Game.Code.GameLogick
             PlayerData playerData = _playerProgressService.Load();
 
             if (SceneManager.GetActiveScene().name != playerData.Level)
-                _stateMachine.SetState<LoadLevelState, string>(playerData.Level);
+                _stateMachine.SetState<LoadProgressState, string>(playerData.Level);
 
             Warp(playerData);
             PrintDebug(playerData);

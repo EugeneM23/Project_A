@@ -31,6 +31,12 @@ namespace Game.Code.Infrastructure.Installers
                 .To<StartState>()
                 .AsSingle()
                 .NonLazy();
+            
+            Container
+                .Bind<IBaseState>()
+                .To<LoadProgressState>()
+                .AsSingle()
+                .NonLazy();
 
             Container
                 .Bind<IBaseState>()
@@ -55,6 +61,8 @@ namespace Game.Code.Infrastructure.Installers
                 .FromNewComponentOnNewGameObject()
                 .AsSingle()
                 .NonLazy();
+            
+            
         }
     }
 }
