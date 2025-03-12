@@ -17,7 +17,7 @@ namespace Game.Code.Infrastructure.GameMachine
 
         public void Enter()
         {
-            _stateMachine.Value.SetState<LoadLevelState, string>("L_Base");
+            _stateMachine.Value.SetState<LoadStateBase, string>("L_Base");
         }
     }
 }

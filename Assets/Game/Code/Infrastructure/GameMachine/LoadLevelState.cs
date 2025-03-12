@@ -1,48 +1,18 @@
-using Game.Code.GameLogick;
 using Game.Code.Infrastructure.GameFactory;
 using UnityEngine;
-using UnityEngine.SceneManagement;
-using Zenject;
 
 namespace Game.Code.Infrastructure.GameMachine
 {
-    public class LoadLevelState : IPayLoadState<string>
+    public class LoadLevelState : LoadStateBase
     {
-        private readonly SceneLoader _sceneLoader;
-
-        public LoadLevelState(SceneLoader sceneLoader)
+        public LoadLevelState(SceneLoader sceneLoader) : base(sceneLoader)
         {
-            _sceneLoader = sceneLoader;
         }
 
-        public void Enter(string scene)
+        protected override Transform SpawnPlayer(PrefabSpawner unitFactory)
         {
-            _sceneLoader.LoadLevel(scene, OnLoaded);
-        }
-
-        private void OnLoaded()
-        {
-            PrefabSpawner unitFactory = Object.FindAnyObjectByType<PrefabSpawner>();
             Vector3 playerSpawnPoint = Object.FindAnyObjectByType<PlayerSpawnPoint>().transform.position;
-
-            if (unitFactory != null)
-            {
-                Transform player = unitFactory.SpawnPlayer(at: playerSpawnPoint);
-
-                SetCameraTarget(player);
-
-                unitFactory.SpawnHUD();
-                unitFactory.SpawnEnemys();
-            }
-        }
-
-        private static void SetCameraTarget(Transform player)
-        {
-            Camera.main.GetComponent<CameraFolow>().SetTarget(player.transform);
-        }
-
-        public void Exit()
-        {
+            return unitFactory.SpawnPlayer(at: playerSpawnPoint);
         }
     }
 }
