@@ -8,7 +8,7 @@ namespace Game.Code.Infrastructure.GameMachine
 {
     public class LoadLevelState : IPayLoadState<string>
     {
-        DiContainer container;
+        private readonly DiContainer _container;
         private readonly LazyInject<GameStateMachine> _stateMachine;
         private readonly SceneLoader _sceneLoader;
         private PrefabSpawner _prefabSpawner;
@@ -18,7 +18,7 @@ namespace Game.Code.Infrastructure.GameMachine
         {
             _stateMachine = stateMachine;
             _sceneLoader = sceneLoader;
-            this.container = container;
+            _container = container;
         }
 
         public void Enter(string scene)
@@ -40,8 +40,6 @@ namespace Game.Code.Infrastructure.GameMachine
                 unitFactory.SpawnHUD();
                 unitFactory.SpawnEnemys();
             }
-
-            Debug.Log("Loading level");
         }
 
         private static void SetCameraTarget(Transform player)
