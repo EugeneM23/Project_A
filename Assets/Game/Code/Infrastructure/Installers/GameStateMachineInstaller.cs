@@ -8,6 +8,8 @@ namespace Game.Code.Infrastructure.Installers
     {
         public override void InstallBindings()
         {
+            Container.Bind<PlayerProgressService>().AsSingle().NonLazy();
+
             Container
                 .Bind<GameStateMachine>()
                 .AsSingle()
@@ -23,25 +25,25 @@ namespace Game.Code.Infrastructure.Installers
                 .BindInterfacesAndSelfTo<GameStateManager>()
                 .AsSingle()
                 .NonLazy();
-            
+
             Container
                 .Bind<IBaseState>()
                 .To<StartState>()
                 .AsSingle()
                 .NonLazy();
-            
+
             Container
                 .Bind<IBaseState>()
                 .To<LoadLevelState>()
                 .AsSingle()
                 .NonLazy();
-            
+
             Container
                 .Bind<IBaseState>()
                 .To<GameplayState>()
                 .AsSingle()
                 .NonLazy();
-            
+
             Container
                 .Bind<SceneLoader>()
                 .AsSingle()

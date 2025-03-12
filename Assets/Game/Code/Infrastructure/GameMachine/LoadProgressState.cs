@@ -1,16 +1,14 @@
 using Game.Code.GameLogick;
 using Game.Code.Infrastructure.GameFactory;
 using UnityEngine;
-using UnityEngine.SceneManagement;
-using Zenject;
 
 namespace Game.Code.Infrastructure.GameMachine
 {
-    public class LoadLevelState : IPayLoadState<string>
+    /*public class LoadProgressState : IPayLoadState<string>
     {
         private readonly SceneLoader _sceneLoader;
 
-        public LoadLevelState(SceneLoader sceneLoader)
+        public LoadProgressState(SceneLoader sceneLoader)
         {
             _sceneLoader = sceneLoader;
         }
@@ -44,5 +42,5 @@ namespace Game.Code.Infrastructure.GameMachine
         public void Exit()
         {
         }
-    }
+    }*/
 }
