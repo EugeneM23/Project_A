@@ -7,14 +7,17 @@ namespace Game.Code.Infrastructure.GameMachine
     public abstract class LoadStateBase : IPayLoadState<string>
     {
         protected readonly SceneLoader _sceneLoader;
+        protected readonly SoundManager _soundManager;
 
-        protected LoadStateBase(SceneLoader sceneLoader)
+        protected LoadStateBase(SceneLoader sceneLoader, SoundManager soundManager)
         {
+            _soundManager = soundManager;
             _sceneLoader = sceneLoader;
         }
 
         public void Enter(string scene)
         {
+            _soundManager.CleanUp();
             _sceneLoader.LoadLevel(scene, OnLoaded);
         }
 

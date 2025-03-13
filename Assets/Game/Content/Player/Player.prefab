@@ -148,6 +148,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 118015ed9d2b43ca9402fd3b4bd0394f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  OnLoad:
+    Guid:
+      Data1: 2139614855
+      Data2: 1081715716
+      Data3: 1162955937
+      Data4: 1751773963
+    Path: event:/SavedGame
   _speed: 10
   _controller: {fileID: 5342089401302442201}
   _rotationSpeed: 20

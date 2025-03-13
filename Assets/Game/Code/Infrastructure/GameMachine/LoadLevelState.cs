@@ -5,7 +5,7 @@ namespace Game.Code.Infrastructure.GameMachine
 {
     public class LoadLevelState : LoadStateBase
     {
-        public LoadLevelState(SceneLoader sceneLoader) : base(sceneLoader)
+        public LoadLevelState(SceneLoader sceneLoader, SoundManager soundManager) : base(sceneLoader, soundManager)
         {
         }
 

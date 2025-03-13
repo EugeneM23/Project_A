@@ -1,8 +1,12 @@
+using System;
+using FMOD.Studio;
+using FMODUnity;
 using Game.Code.Infrastructure.GameMachine;
 using Game.Code.Infrastructure.Services;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using Zenject;
+using STOP_MODE = FMOD.Studio.STOP_MODE;
 
 namespace Game.Code.GameLogick
 {
@@ -19,16 +23,42 @@ namespace Game.Code.GameLogick
         private string _currentWeapon = "Pistol";
         private GameStateMachine _stateMachine;
 
+        private EventInstance _playerFootStep;
+        private SoundManager _soundManager;
+
         [Inject]
         private void Construct(InputService inputService, PlayerProgressService playerProgressService,
-            GameStateMachine stateMachine)
+            GameStateMachine stateMachine, SoundManager soundManager)
         {
             _playerProgressService = playerProgressService;
             _inputService = inputService;
             _stateMachine = stateMachine;
+            _soundManager = soundManager;
         }
 
-        private void Start() => _camera = Camera.main;
+        private void Start()
+        {
+            _playerFootStep =_soundManager.CreateInstance(FMODEvents.FootStepsEvent);
+            _camera = Camera.main;
+        }
+
+        private void UpdateSound()
+        {
+            if (_inputService.Axis.sqrMagnitude > 0 && _controller.isGrounded)
+            {
+                Debug.Log("Step");
+                PLAYBACK_STATE playbackState;
+                _playerFootStep.getPlaybackState(out playbackState);
+                if (playbackState.Equals(PLAYBACK_STATE.STOPPED))
+                {
+                    _playerFootStep.start();
+                }
+            }
+            else
+            {
+                _playerFootStep.stop(STOP_MODE.IMMEDIATE);
+            }
+        }
 
         private void Update()
         {
@@ -46,6 +76,7 @@ namespace Game.Code.GameLogick
             movementVector += Physics.gravity;
 
             _controller.Move(_speed * movementVector * Time.deltaTime);
+            UpdateSound();
         }
 
         private void TestSaveLoad()
@@ -72,6 +103,8 @@ namespace Game.Code.GameLogick
         private void SaveProgress()
         {
             _playerProgressService.Save(CreatePlayerData());
+
+            _soundManager.PlayeOneShot("event:/LoadGame");
         }
 
         private void LoadProgress()
@@ -83,6 +116,8 @@ namespace Game.Code.GameLogick
 
             Warp(playerData);
             PrintDebug(playerData);
+
+            _soundManager.PlayeOneShot("event:/SavedGame");
         }
 
         private void Warp(PlayerData playerData)

@@ -7,7 +7,8 @@ public class LoadProgressState : LoadStateBase
 {
     private readonly PlayerProgressService _playerProgressService;
 
-    public LoadProgressState(SceneLoader sceneLoader, PlayerProgressService playerProgressService) : base(sceneLoader)
+    public LoadProgressState(SceneLoader sceneLoader, SoundManager soundManager, PlayerProgressService playerProgressService) 
+        : base(sceneLoader, soundManager)
     {
         _playerProgressService = playerProgressService;
     }

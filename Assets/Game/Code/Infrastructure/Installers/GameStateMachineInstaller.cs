@@ -8,7 +8,15 @@ namespace Game.Code.Infrastructure.Installers
     {
         public override void InstallBindings()
         {
-            Container.Bind<PlayerProgressService>().AsSingle().NonLazy();
+            Container
+                .BindInterfacesAndSelfTo<SoundManager>()
+                .AsSingle().NonLazy();
+            
+            
+            Container
+                .Bind<PlayerProgressService>()
+                .AsSingle()
+                .NonLazy();
 
             Container
                 .Bind<GameStateMachine>()
@@ -61,8 +69,6 @@ namespace Game.Code.Infrastructure.Installers
                 .FromNewComponentOnNewGameObject()
                 .AsSingle()
                 .NonLazy();
-            
-            
         }
     }
 }

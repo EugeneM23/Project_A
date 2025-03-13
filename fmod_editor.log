@@ -8,7 +8,7 @@
 [LOG] Thread::initThread                       : Init FMOD stream thread. Affinity: 0x4000000000000003, Priority: 0xFFFF7FFB, Stack Size: 98304, Semaphore: No, Sleep Time: 10, Looping: Yes.
 [LOG] SystemI::DSPCodecPoolRegister            : register codec pool for pool type 0
 [LOG] Thread::initThread                       : Init FMOD mixer thread. Affinity: 0x4000000000000001, Priority: 0xFFFF7FFA, Stack Size: 81920, Semaphore: Yes, Sleep Time: 0, Looping: Yes.
-[LOG] AsyncManager::init                       : manager 0x1273ae008 isAsync 0 updatePeriod 0.02
+[LOG] AsyncManager::init                       : manager 0x35b028a08 isAsync 0 updatePeriod 0.02
 [LOG] AsyncManager::init                       : done
 [LOG] PlaybackSystem::init                     : 
 [LOG] Thread::initThread                       : Init FMOD Studio sample load thread. Affinity: 0x4000000000000003, Priority: 0xFFFF7FFD, Stack Size: 98304, Semaphore: No, Sleep Time: 1, Looping: No.
@@ -17,25 +17,491 @@
 [LOG] Manager::init                            : done.
 [LOG] BankLoader::serializeBank                : fileversion = 146, compatVersion = 146 (oldest = 44, newest = 146)
 [LOG] BankLoader::serializeBank                : fileversion = 146, compatVersion = 146 (oldest = 44, newest = 146)
-[LOG] BankLoader::serializeBank                : fileversion = 146, compatVersion = 146 (oldest = 44, newest = 146)
 [LOG] PlaybackSystem::acquireMasterBus         : Setting master channel group format to 6
 [LOG] BankLoader::serializeBank                : fileversion = 146, compatVersion = 146 (oldest = 44, newest = 146)
-[LOG] BankLoader::serializeBank                : fileversion = 146, compatVersion = 146 (oldest = 44, newest = 146)
-[LOG] BankLoader::serializeBank                : fileversion = 146, compatVersion = 146 (oldest = 44, newest = 146)
-[LOG] PlaybackSystem::acquireMasterBus         : Setting master channel group format to 6
-[LOG] BankLoader::serializeBank                : fileversion = 146, compatVersion = 146 (oldest = 44, newest = 146)
-[LOG] BankLoader::serializeBank                : fileversion = 146, compatVersion = 146 (oldest = 44, newest = 146)
-[LOG] BankLoader::serializeBank                : fileversion = 146, compatVersion = 146 (oldest = 44, newest = 146)
-[LOG] PlaybackSystem::acquireMasterBus         : Setting master channel group format to 6
-[LOG] BankLoader::serializeBank                : fileversion = 146, compatVersion = 146 (oldest = 44, newest = 146)
-[LOG] BankLoader::serializeBank                : fileversion = 146, compatVersion = 146 (oldest = 44, newest = 146)
-[LOG] BankLoader::serializeBank                : fileversion = 146, compatVersion = 146 (oldest = 44, newest = 146)
-[LOG] PlaybackSystem::acquireMasterBus         : Setting master channel group format to 6
-[LOG] BankLoader::serializeBank                : fileversion = 146, compatVersion = 146 (oldest = 44, newest = 146)
+[LOG] SystemI::createSound                     : filename = ../TestProj/Build/Desktop/TestBank.bank : mode 02010082
+[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] AsyncThread::add                         : add sound to async queue : soundi = 0x37464a758, queue head = 0x35ad1b368, queue count = 0
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 0x37464a758
+[LOG] SystemI::createSoundInternal             :     Create name='../TestProj/Build/Desktop/TestBank.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 1043136
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 6976
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 0x374607438
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekposition = 2023
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='Foley & Impact_Preview', format=5, channels=2, frequency=48000, lengthbytes=212576, lengthpcm=804989, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.833740.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 0x37464a758
+[LOG] SoundI::release                          : Foley & Impact_Preview (0x37464a758)
+[LOG] SoundI::release                          :     Foley & Impact_Preview (0x35ac543d8)
+[LOG] SoundI::release                          :     Foley & Impact_Preview (0x399d44748)
+[LOG] SystemI::createSound                     : filename = ../TestProj/Build/Desktop/TestBank.bank : mode 02010082
+[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] AsyncThread::add                         : add sound to async queue : soundi = 0x1176c4c58, queue head = 0x35ad1b368, queue count = 0
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 0x1176c4c58
+[LOG] SystemI::createSoundInternal             :     Create name='../TestProj/Build/Desktop/TestBank.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 1043136
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 6976
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 0x3956bdca8
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekposition = 2023
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='Foley & Impact_Preview', format=5, channels=2, frequency=48000, lengthbytes=212576, lengthpcm=804989, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.833740.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 0x1176c4c58
+[LOG] SoundI::release                          : Foley & Impact_Preview (0x1176c4c58)
+[LOG] SoundI::release                          :     Foley & Impact_Preview (0x3863781d8)
+[LOG] SoundI::release                          :     Foley & Impact_Preview (0x36362b028)
+[LOG] SystemI::createSound                     : filename = ../TestProj/Build/Desktop/TestBank.bank : mode 02010082
+[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] AsyncThread::add                         : add sound to async queue : soundi = 0x394792768, queue head = 0x35ad1b368, queue count = 0
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 0x394792768
+[LOG] SystemI::createSoundInternal             :     Create name='../TestProj/Build/Desktop/TestBank.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 1043136
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 6976
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 0x394128bd8
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekposition = 2023
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='Foley & Impact_Preview', format=5, channels=2, frequency=48000, lengthbytes=212576, lengthpcm=804989, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.833740.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 0x394792768
+[LOG] SoundI::release                          : Foley & Impact_Preview (0x394792768)
+[LOG] SoundI::release                          :     Foley & Impact_Preview (0x3863781d8)
+[LOG] SoundI::release                          :     Foley & Impact_Preview (0x36362b028)
+[LOG] SystemI::createSound                     : filename = ../TestProj/Build/Desktop/TestBank.bank : mode 02010082
+[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] AsyncThread::add                         : add sound to async queue : soundi = 0x37464a758, queue head = 0x35ad1b368, queue count = 0
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 0x37464a758
+[LOG] SystemI::createSoundInternal             :     Create name='../TestProj/Build/Desktop/TestBank.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 1043136
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 6976
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 0x3746b0858
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekposition = 2023
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='Foley & Impact_Preview', format=5, channels=2, frequency=48000, lengthbytes=212576, lengthpcm=804989, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.833740.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 0x37464a758
+[LOG] SoundI::release                          : Foley & Impact_Preview (0x37464a758)
+[LOG] SoundI::release                          :     Foley & Impact_Preview (0x3947ed068)
+[LOG] SoundI::release                          :     Foley & Impact_Preview (0x3947c36d8)
+[LOG] SystemI::createSound                     : filename = ../TestProj/Build/Desktop/TestBank.bank : mode 02010082
+[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] AsyncThread::add                         : add sound to async queue : soundi = 0x36f9dce28, queue head = 0x35ad1b368, queue count = 0
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 0x36f9dce28
+[LOG] SystemI::createSoundInternal             :     Create name='../TestProj/Build/Desktop/TestBank.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 1043136
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 6976
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 0x38831d958
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekposition = 2023
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='Foley & Impact_Preview', format=5, channels=2, frequency=48000, lengthbytes=212576, lengthpcm=804989, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.833740.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 0x36f9dce28
+[LOG] SoundI::release                          : Foley & Impact_Preview (0x36f9dce28)
+[LOG] SoundI::release                          :     Foley & Impact_Preview (0x38c2610f8)
+[LOG] SoundI::release                          :     Foley & Impact_Preview (0x363497e58)
+[LOG] SystemI::createSound                     : filename = ../TestProj/Build/Desktop/TestBank.bank : mode 02010082
+[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] AsyncThread::add                         : add sound to async queue : soundi = 0x363497e58, queue head = 0x35ad1b368, queue count = 0
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 0x363497e58
+[LOG] SystemI::createSoundInternal             :     Create name='../TestProj/Build/Desktop/TestBank.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 1043136
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 6976
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 0x3634d0398
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekposition = 2023
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='Foley & Impact_Preview', format=5, channels=2, frequency=48000, lengthbytes=212576, lengthpcm=804989, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.833740.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 0x363497e58
+[LOG] SoundI::release                          : Foley & Impact_Preview (0x363497e58)
+[LOG] SoundI::release                          :     Foley & Impact_Preview (0x125018ae8)
+[LOG] SoundI::release                          :     Foley & Impact_Preview (0x125068cb8)
+[LOG] SystemI::createSound                     : filename = ../TestProj/Build/Desktop/TestBank.bank : mode 02010082
+[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] AsyncThread::add                         : add sound to async queue : soundi = 0x38e2d9288, queue head = 0x35ad1b368, queue count = 0
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 0x38e2d9288
+[LOG] SystemI::createSoundInternal             :     Create name='../TestProj/Build/Desktop/TestBank.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 1043136
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 6976
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 0x38e2d9f08
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekposition = 2023
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='Foley & Impact_Preview', format=5, channels=2, frequency=48000, lengthbytes=212576, lengthpcm=804989, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.833740.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 0x38e2d9288
+[LOG] SoundI::release                          : Foley & Impact_Preview (0x38e2d9288)
+[LOG] SoundI::release                          :     Foley & Impact_Preview (0x3859f29b8)
+[LOG] SoundI::release                          :     Foley & Impact_Preview (0x38599cc68)
+[LOG] SystemI::createSound                     : filename = ../TestProj/Build/Desktop/TestBank.bank : mode 02010082
+[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] AsyncThread::add                         : add sound to async queue : soundi = 0x125068cb8, queue head = 0x35ad1b368, queue count = 0
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 0x125068cb8
+[LOG] SystemI::createSoundInternal             :     Create name='../TestProj/Build/Desktop/TestBank.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 1043136
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 6976
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 0x1250fd6e8
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekposition = 2023
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='Foley & Impact_Preview', format=5, channels=2, frequency=48000, lengthbytes=212576, lengthpcm=804989, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.833740.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 0x125068cb8
+[LOG] SoundI::release                          : Foley & Impact_Preview (0x125068cb8)
+[LOG] SoundI::release                          :     Foley & Impact_Preview (0x3863442f8)
+[LOG] SoundI::release                          :     Foley & Impact_Preview (0x386352b48)
+[LOG] SystemI::createSoundInternal             : Create name='', mode=0x02000202
+[LOG] SystemI::createSoundInternal             : exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             : exinfo->length             = 1043136
+[LOG] SystemI::createSoundInternal             : exinfo->fileoffset         = 6976
+[LOG] SystemI::createSoundInternal             : exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlist      = 0x3580227d4
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             : exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             : exinfo->useropen           = 0x3a2df4b68
+[LOG] SystemI::createSoundInternal             : exinfo->userclose          = 0x3a2df4c3c
+[LOG] SystemI::createSoundInternal             : exinfo->userread           = 0x3a2df4c78
+[LOG] SystemI::createSoundInternal             : exinfo->userseek           = 0x3a2df4d48
+[LOG] SystemI::createSoundInternal             : exinfo->fileuserdata       = 0x374645118
+[LOG] SystemI::createSoundInternal             : exinfo->initialseekpostype = 1
+[LOG] SystemI::DSPCodecPoolRegister            : register codec pool for pool type 4
+[LOG] SystemI::createSoundInternal             : Sample 0/1: name='s_ef_ce_yororo_e', format=5, channels=1, frequency=48000, lengthbytes=8704, lengthpcm=52887, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.757019.
+[LOG] SystemI::createSound                     : filename = ../TestProj/Build/Desktop/TestBank.bank : mode 02010082
+[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] AsyncThread::add                         : add sound to async queue : soundi = 0x39475e528, queue head = 0x35ad1b368, queue count = 0
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 0x39475e528
+[LOG] SystemI::createSoundInternal             :     Create name='../TestProj/Build/Desktop/TestBank.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 1043136
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 6976
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 0x394128bd8
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekposition = 2023
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='Foley & Impact_Preview', format=5, channels=2, frequency=48000, lengthbytes=212576, lengthpcm=804989, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.833740.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 0x39475e528
+[LOG] SoundI::release                          : Foley & Impact_Preview (0x39475e528)
+[LOG] SoundI::release                          :     Foley & Impact_Preview (0x3863442f8)
+[LOG] SoundI::release                          :     Foley & Impact_Preview (0x386352b48)
+[LOG] SystemI::createSound                     : filename = ../TestProj/Build/Desktop/TestBank.bank : mode 02010082
+[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] AsyncThread::add                         : add sound to async queue : soundi = 0x39475e528, queue head = 0x35ad1b368, queue count = 0
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 0x39475e528
+[LOG] SystemI::createSoundInternal             :     Create name='../TestProj/Build/Desktop/TestBank.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 1043136
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 6976
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 0x394128bd8
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekposition = 2023
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='Foley & Impact_Preview', format=5, channels=2, frequency=48000, lengthbytes=212576, lengthpcm=804989, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.833740.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 0x39475e528
+[LOG] SystemI::createSoundInternal             : Create name='', mode=0x02000202
+[LOG] SystemI::createSoundInternal             : exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             : exinfo->length             = 1043136
+[LOG] SystemI::createSoundInternal             : exinfo->fileoffset         = 6976
+[LOG] SystemI::createSoundInternal             : exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlist      = 0x3580227d4
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             : exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             : exinfo->useropen           = 0x3a2df4b68
+[LOG] SystemI::createSoundInternal             : exinfo->userclose          = 0x3a2df4c3c
+[LOG] SystemI::createSoundInternal             : exinfo->userread           = 0x3a2df4c78
+[LOG] SystemI::createSoundInternal             : exinfo->userseek           = 0x3a2df4d48
+[LOG] SystemI::createSoundInternal             : exinfo->fileuserdata       = 0x395664218
+[LOG] SystemI::createSoundInternal             : exinfo->initialseekpostype = 1
+[LOG] SystemI::DSPCodecPoolRegister            : register codec pool for pool type 4
+[LOG] SystemI::createSoundInternal             : Sample 0/1: name='bloodfx13', format=5, channels=1, frequency=48000, lengthbytes=9152, lengthpcm=41454, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.854767.
+[LOG] SoundI::release                          : Foley & Impact_Preview (0x39475e528)
+[LOG] SoundI::release                          :     Foley & Impact_Preview (0x386317ee8)
+[LOG] SoundI::release                          :     Foley & Impact_Preview (0x386313d98)
+[LOG] SystemI::createSound                     : filename = ../TestProj/Build/Desktop/TestBank.bank : mode 02010082
+[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] AsyncThread::add                         : add sound to async queue : soundi = 0x3867d0908, queue head = 0x35ad1b368, queue count = 0
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 0x3867d0908
+[LOG] SystemI::createSoundInternal             :     Create name='../TestProj/Build/Desktop/TestBank.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 1043136
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 6976
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 0x3867d9af8
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekposition = 2023
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='Foley & Impact_Preview', format=5, channels=2, frequency=48000, lengthbytes=212576, lengthpcm=804989, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.833740.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 0x3867d0908
+[LOG] SystemI::createSound                     : filename = ../TestProj/Build/Desktop/TestBank.bank : mode 02010082
+[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] AsyncThread::add                         : add sound to async queue : soundi = 0x384fc7358, queue head = 0x35ad1b368, queue count = 0
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 0x384fc7358
+[LOG] SystemI::createSoundInternal             :     Create name='../TestProj/Build/Desktop/TestBank.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 1043136
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 6976
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 0x3863eed98
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekposition = 5400
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='Sandbox', format=5, channels=2, frequency=48000, lengthbytes=785248, lengthpcm=3008926, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.707367.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 0x384fc7358
+[LOG] SoundI::release                          : Sandbox (0x35e67e2d8)
+[LOG] SoundI::release                          :     Sandbox (0x35adc6458)
+[LOG] SoundI::release                          :     Sandbox (0x35e6b0168)
+[LOG] SoundI::release                          : Foley & Impact_Preview (0x3867d0908)
+[LOG] SoundI::release                          :     Foley & Impact_Preview (0x386317ee8)
+[LOG] SoundI::release                          :     Foley & Impact_Preview (0x386313d98)
+[LOG] SystemI::createSound                     : filename = ../TestProj/Build/Desktop/TestBank.bank : mode 02010082
+[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] AsyncThread::add                         : add sound to async queue : soundi = 0x38e2daf98, queue head = 0x35ad1b368, queue count = 0
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 0x38e2daf98
+[LOG] SystemI::createSoundInternal             :     Create name='../TestProj/Build/Desktop/TestBank.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 1043136
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 6976
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 0x366059d68
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekposition = 2023
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='Foley & Impact_Preview', format=5, channels=2, frequency=48000, lengthbytes=212576, lengthpcm=804989, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.833740.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 0x38e2daf98
+[LOG] SoundI::release                          : Foley & Impact_Preview (0x38e2daf98)
+[LOG] SoundI::release                          :     Foley & Impact_Preview (0x3859f29b8)
+[LOG] SoundI::release                          :     Foley & Impact_Preview (0x38599cc68)
+[LOG] SystemI::createSound                     : filename = ../TestProj/Build/Desktop/TestBank.bank : mode 02010082
+[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] AsyncThread::add                         : add sound to async queue : soundi = 0x38599cc68, queue head = 0x35ad1b368, queue count = 0
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 0x38599cc68
+[LOG] SystemI::createSoundInternal             :     Create name='../TestProj/Build/Desktop/TestBank.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 1043136
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 6976
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 0x3be93ae78
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekposition = 2023
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='Foley & Impact_Preview', format=5, channels=2, frequency=48000, lengthbytes=212576, lengthpcm=804989, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.833740.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 0x38599cc68
+[LOG] SoundI::release                          : Foley & Impact_Preview (0x38599cc68)
+[LOG] SoundI::release                          :     Foley & Impact_Preview (0x37462f998)
+[LOG] SoundI::release                          :     Foley & Impact_Preview (0x35e67e2d8)
+[LOG] SystemI::createSound                     : filename = ../TestProj/Build/Desktop/TestBank.bank : mode 02010082
+[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] AsyncThread::add                         : add sound to async queue : soundi = 0x386714b58, queue head = 0x35ad1b368, queue count = 0
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 0x386714b58
+[LOG] SystemI::createSoundInternal             :     Create name='../TestProj/Build/Desktop/TestBank.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 1043136
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 6976
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 0x3867d9af8
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekposition = 2023
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='Foley & Impact_Preview', format=5, channels=2, frequency=48000, lengthbytes=212576, lengthpcm=804989, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.833740.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 0x386714b58
+[LOG] SystemI::createSound                     : filename = ../TestProj/Build/Desktop/TestBank.bank : mode 02010082
+[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] AsyncThread::add                         : add sound to async queue : soundi = 0x395697718, queue head = 0x35ad1b368, queue count = 0
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 0x395697718
+[LOG] SystemI::createSoundInternal             :     Create name='../TestProj/Build/Desktop/TestBank.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 1043136
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 6976
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 0x3956196a8
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekposition = 5400
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='Sandbox', format=5, channels=2, frequency=48000, lengthbytes=785248, lengthpcm=3008926, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.707367.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 0x395697718
+[LOG] SoundI::release                          : Sandbox (0x384fc7358)
+[LOG] SoundI::release                          :     Sandbox (0x3956b8aa8)
+[LOG] SoundI::release                          :     Sandbox (0x3956c07c8)
+[LOG] SoundI::release                          : Foley & Impact_Preview (0x386714b58)
+[LOG] SoundI::release                          :     Foley & Impact_Preview (0x39478bef8)
+[LOG] SoundI::release                          :     Foley & Impact_Preview (0x39478f3f8)
+[LOG] SystemI::createSound                     : filename = ../TestProj/Build/Desktop/TestBank.bank : mode 02010082
+[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] AsyncThread::add                         : add sound to async queue : soundi = 0x384fc7358, queue head = 0x35ad1b368, queue count = 0
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 0x384fc7358
+[LOG] SystemI::createSoundInternal             :     Create name='../TestProj/Build/Desktop/TestBank.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 1043136
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 6976
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 0x3863eed98
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekposition = 2023
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='Foley & Impact_Preview', format=5, channels=2, frequency=48000, lengthbytes=212576, lengthpcm=804989, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.833740.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 0x384fc7358
+[LOG] SoundI::release                          : Foley & Impact_Preview (0x384fc7358)
+[LOG] SoundI::release                          :     Foley & Impact_Preview (0x39478f3f8)
+[LOG] SoundI::release                          :     Foley & Impact_Preview (0x39478bef8)
+[LOG] SystemI::createSound                     : filename = ../TestProj/Build/Desktop/TestBank.bank : mode 02010082
+[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] AsyncThread::add                         : add sound to async queue : soundi = 0x38599cc68, queue head = 0x35ad1b368, queue count = 0
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 0x38599cc68
+[LOG] SystemI::createSoundInternal             :     Create name='../TestProj/Build/Desktop/TestBank.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 1043136
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 6976
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 0x3be93ae78
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekposition = 2023
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='Foley & Impact_Preview', format=5, channels=2, frequency=48000, lengthbytes=212576, lengthpcm=804989, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.833740.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 0x38599cc68
+[LOG] SoundI::release                          : Foley & Impact_Preview (0x38599cc68)
+[LOG] SoundI::release                          :     Foley & Impact_Preview (0x38c2a2128)
+[LOG] SoundI::release                          :     Foley & Impact_Preview (0x363497e58)
+[LOG] SystemI::createSound                     : filename = ../TestProj/Build/Desktop/TestBank.bank : mode 02010082
+[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] AsyncThread::add                         : add sound to async queue : soundi = 0x36f9dce28, queue head = 0x35ad1b368, queue count = 0
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 0x36f9dce28
+[LOG] SystemI::createSoundInternal             :     Create name='../TestProj/Build/Desktop/TestBank.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 1043136
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 6976
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 0x388372348
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekposition = 2023
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='Foley & Impact_Preview', format=5, channels=2, frequency=48000, lengthbytes=212576, lengthpcm=804989, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.833740.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 0x36f9dce28
+[LOG] SoundI::release                          : Foley & Impact_Preview (0x36f9dce28)
+[LOG] SoundI::release                          :     Foley & Impact_Preview (0x38c2a2128)
+[LOG] SoundI::release                          :     Foley & Impact_Preview (0x363497e58)
+[LOG] SystemI::createSound                     : filename = ../TestProj/Build/Desktop/TestBank.bank : mode 02010082
+[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] AsyncThread::add                         : add sound to async queue : soundi = 0x36f9dce28, queue head = 0x35ad1b368, queue count = 0
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 0x36f9dce28
+[LOG] SystemI::createSoundInternal             :     Create name='../TestProj/Build/Desktop/TestBank.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 1043136
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 6976
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 0x388372348
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekposition = 2023
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='Foley & Impact_Preview', format=5, channels=2, frequency=48000, lengthbytes=212576, lengthpcm=804989, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.833740.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 0x36f9dce28
+[LOG] SoundI::release                          : Foley & Impact_Preview (0x36f9dce28)
+[LOG] SoundI::release                          :     Foley & Impact_Preview (0x38c2a2128)
+[LOG] SoundI::release                          :     Foley & Impact_Preview (0x363497e58)
+[LOG] SystemI::createSound                     : filename = ../TestProj/Build/Desktop/TestBank.bank : mode 02010082
+[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] AsyncThread::add                         : add sound to async queue : soundi = 0x35e6b0168, queue head = 0x35ad1b368, queue count = 0
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 0x35e6b0168
+[LOG] SystemI::createSoundInternal             :     Create name='../TestProj/Build/Desktop/TestBank.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 1043136
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 6976
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 0x374628c68
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekposition = 2023
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='Foley & Impact_Preview', format=5, channels=2, frequency=48000, lengthbytes=212576, lengthpcm=804989, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.833740.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 0x35e6b0168
+[LOG] SoundI::release                          : Foley & Impact_Preview (0x35e6b0168)
+[LOG] SoundI::release                          :     Foley & Impact_Preview (0x3947232c8)
+[LOG] SoundI::release                          :     Foley & Impact_Preview (0x394705bd8)
+[LOG] SystemI::createSound                     : filename = ../TestProj/Build/Desktop/TestBank.bank : mode 02010082
+[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] AsyncThread::add                         : add sound to async queue : soundi = 0x386736198, queue head = 0x35ad1b368, queue count = 0
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 0x386736198
+[LOG] SystemI::createSoundInternal             :     Create name='../TestProj/Build/Desktop/TestBank.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 1043136
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 6976
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 0x38678c038
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekposition = 2023
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='Foley & Impact_Preview', format=5, channels=2, frequency=48000, lengthbytes=212576, lengthpcm=804989, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.833740.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 0x386736198
+[LOG] SoundI::release                          : Foley & Impact_Preview (0x386736198)
+[LOG] SoundI::release                          :     Foley & Impact_Preview (0x3956482d8)
+[LOG] SoundI::release                          :     Foley & Impact_Preview (0x39561e608)
+[LOG] SystemI::createSound                     : filename = ../TestProj/Build/Desktop/TestBank.bank : mode 02010082
+[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] AsyncThread::add                         : add sound to async queue : soundi = 0x38671d078, queue head = 0x35ad1b368, queue count = 0
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 0x38671d078
+[LOG] SystemI::createSoundInternal             :     Create name='../TestProj/Build/Desktop/TestBank.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 1043136
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 6976
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 0x3867d9af8
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekposition = 5400
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='Sandbox', format=5, channels=2, frequency=48000, lengthbytes=785248, lengthpcm=3008926, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.707367.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 0x38671d078
+[LOG] SoundI::release                          : Sandbox (0x395697718)
+[LOG] SoundI::release                          :     Sandbox (0x3947de238)
+[LOG] SoundI::release                          :     Sandbox (0x39479e8f8)
+[LOG] SoundI::release                          : Sandbox (0x38671d078)
+[LOG] SoundI::release                          :     Sandbox (0x3947b5048)
+[LOG] SoundI::release                          :     Sandbox (0x39474a0f8)
+[LOG] SoundI::release                          :  (0x3956edcb8)
+[LOG] SoundI::release                          :     bloodfx13 (0x3956d16a8)
+[LOG] SoundI::release                          :  (0x3746adac8)
+[LOG] SoundI::release                          :     s_ef_ce_yororo_e (0x374670d88)
+[LOG] Thread::callback                         : FMOD Studio update thread finished.
 [LOG] Thread::callback                         : FMOD Studio bank load thread finished.
+[LOG] Profile::disconnectAll                   : Profiler disconnecting all clients
 [LOG] Thread::callback                         : FMOD Studio sample load thread finished.
 [LOG] LiveUpdate::release                      : 
 [LOG] LiveUpdate::reset                        : Reset connection (reason Disconnected)
 [LOG] Thread::callback                         : FMOD stream thread finished.
 [LOG] Thread::callback                         : FMOD mixer thread finished.
+[LOG] Profile::disconnectAll                   : Profiler disconnecting all clients
 [LOG] SystemI::closeInternal                   : Closed.
