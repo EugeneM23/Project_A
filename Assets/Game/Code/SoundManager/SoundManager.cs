@@ -13,16 +13,9 @@ public class SoundManager : IInitializable
 
     private EventInstance _embient;
 
-    private void InitAmbient(string ambientEventReference)
-    {
-        _embient = RuntimeManager.CreateInstance(ambientEventReference);
-        _embient.start();
-    }
+    public void Initialize() => InitAmbient(FMODEvents.Ambient);
 
-    public void PlayeOneShot(string eventPath)
-    {
-        RuntimeManager.PlayOneShot(eventPath);
-    }
+    public void PlayeOneShot(string eventPath) => RuntimeManager.PlayOneShot(eventPath);
 
     public EventInstance CreateInstance(string eventReference)
     {
@@ -30,6 +23,12 @@ public class SoundManager : IInitializable
 
         _savedGameEvents.Add(eventInstance);
         return eventInstance;
+    }
+
+    private void InitAmbient(string ambientEventReference)
+    {
+        _embient = RuntimeManager.CreateInstance(ambientEventReference);
+        _embient.start();
     }
 
     public void CleanUp()
@@ -41,15 +40,6 @@ public class SoundManager : IInitializable
         }
 
         foreach (var item in _emitters)
-        {
             item.Stop();
-        }
-    }
-
-    public void Initialize()
-    {
-        Debug.Log("Initializing SoundManager");
-        CleanUp();
-        InitAmbient(FMODEvents.Ambient);
     }
 }

@@ -167,16 +167,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 6312623940382540811, guid: 6728508d3dcc94359bf46713be2902e0, type: 3}
-      propertyPath: _enemyPrefabs.Array.size
-      value: 4
-      objectReference: {fileID: 0}
     - target: {fileID: 6617763146345525528, guid: 6728508d3dcc94359bf46713be2902e0, type: 3}
       propertyPath: m_Name
       value: '[BootStrapper]'
       objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 6144731432565593402, guid: 6728508d3dcc94359bf46713be2902e0, type: 3}
+    m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -310,7 +305,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f12ee1cdfb2b749a682ef336392f90e4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _level: L_Init
 --- !u!65 &784157345
 BoxCollider:
   m_ObjectHideFlags: 0

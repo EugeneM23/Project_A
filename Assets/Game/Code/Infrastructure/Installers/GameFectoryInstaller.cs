@@ -14,10 +14,6 @@ namespace Game.Code.Infrastructure.Installers
                 .FromComponentInHierarchy()
                 .AsSingle()
                 .NonLazy();
-
-            Container
-                .BindFactory<UnityEngine.Object, Player, Player.Factory>()
-                .FromFactory<PrefabFactory<Player>>();
             
             Container
                 .BindFactory<UnityEngine.Object, HUD, HUD.Factory>()

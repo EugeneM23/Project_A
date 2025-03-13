@@ -12,16 +12,11 @@ namespace Game.Code.Infrastructure.Installers
                 .BindInterfacesAndSelfTo<SoundManager>()
                 .AsSingle().NonLazy();
             
-            
             Container
                 .Bind<PlayerProgressService>()
                 .AsSingle()
                 .NonLazy();
 
-            Container
-                .Bind<GameStateMachine>()
-                .AsSingle()
-                .NonLazy();
 
             Container
                 .Bind<InputService>()
@@ -29,34 +24,6 @@ namespace Game.Code.Infrastructure.Installers
                 .AsSingle()
                 .NonLazy();
 
-            Container
-                .BindInterfacesAndSelfTo<GameStateManager>()
-                .AsSingle()
-                .NonLazy();
-
-            Container
-                .Bind<IBaseState>()
-                .To<StartState>()
-                .AsSingle()
-                .NonLazy();
-            
-            Container
-                .Bind<IBaseState>()
-                .To<LoadProgressState>()
-                .AsSingle()
-                .NonLazy();
-
-            Container
-                .Bind<IBaseState>()
-                .To<LoadLevelState>()
-                .AsSingle()
-                .NonLazy();
-
-            Container
-                .Bind<IBaseState>()
-                .To<GameplayState>()
-                .AsSingle()
-                .NonLazy();
 
             Container
                 .Bind<SceneLoader>()
