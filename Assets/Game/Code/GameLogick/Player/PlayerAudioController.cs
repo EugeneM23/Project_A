@@ -1,6 +1,6 @@
 using FMOD.Studio;
 using Game.Code.Infrastructure.Services;
-using Game.Code.SoundManager;
+using Game.Code.SoundSystem;
 using UnityEngine;
 using Zenject;
 
@@ -9,12 +9,12 @@ namespace Game.Code.GameLogick.Player
     public class PlayerAudioController : ITickable, IInitializable
     {
         private readonly CharacterController _characterController;
-        private readonly SoundManager.SoundManager _soundManager;
+        private readonly SoundManager _soundManager;
         private readonly InputService _inputService;
 
         private EventInstance _playerFootStep;
 
-        public PlayerAudioController(InputService inputService, SoundManager.SoundManager soundManager, IPlayer player)
+        public PlayerAudioController(InputService inputService, SoundManager soundManager, IPlayer player)
         {
             _inputService = inputService;
             _soundManager = soundManager;

@@ -1,5 +1,6 @@
 using System;
 using UnityEngine;
+using Input = UnityEngine.Windows.Input;
 
 namespace Game.Code.GameLogick.Player
 {

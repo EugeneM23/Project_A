@@ -1,4 +1,5 @@
 using System;
+using Game.Code.Infrastructure.Systems;
 using Unity.VisualScripting;
 
 namespace Game.Code.GameLogick.Player
@@ -14,18 +15,10 @@ namespace Game.Code.GameLogick.Player
             _gameManager = gameManager;
         }
 
-        public void Initialize()
-        {
-            _player.OnDeath += OnDeath;
-        }
+        public void Initialize() => _player.OnDeath += OnDeath;
+        public void Dispose() => _player.OnDeath -= OnDeath;
 
-        private void OnDeath()
-        {
-            _gameManager.FinishGame();
-        }
-
-        public void Dispose()
-        {
-        }
+        
+        private void OnDeath() => _gameManager.FinishGame();
     }
 }
