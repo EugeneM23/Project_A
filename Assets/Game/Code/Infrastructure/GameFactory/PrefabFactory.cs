@@ -1,7 +1,7 @@
 using UnityEngine;
 using Zenject;
 
-namespace Game.Code
+namespace Game.Code.Infrastructure.GameFactory
 {
     public class PrefabFactory<T> : IFactory<Object, T> where T : MonoBehaviour
     {

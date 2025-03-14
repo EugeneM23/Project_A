@@ -1,5 +1,6 @@
 using System.Collections.Generic;
 using Game.Code.GameLogick;
+using Game.Code.GameLogick.Enemys;
 using Game.Code.UI;
 using UnityEngine;
 using Zenject;

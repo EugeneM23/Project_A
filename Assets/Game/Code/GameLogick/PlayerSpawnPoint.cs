@@ -1,8 +1,6 @@
-using System;
-using UnityEditor;
 using UnityEngine;
 
-namespace Game.Code.Infrastructure.GameMachine
+namespace Game.Code.GameLogick
 {
     internal class PlayerSpawnPoint : MonoBehaviour
     {

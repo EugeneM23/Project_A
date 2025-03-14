@@ -4,19 +4,18 @@ using Zenject;
 
 namespace Game.Code.Infrastructure.Installers
 {
-    public class GameStateMachineInstaller : MonoInstaller
+    public class GameInstaller : MonoInstaller
     {
         public override void InstallBindings()
         {
             Container
-                .BindInterfacesAndSelfTo<SoundManager>()
+                .BindInterfacesAndSelfTo<SoundManager.SoundManager>()
                 .AsSingle().NonLazy();
             
             Container
                 .Bind<PlayerProgressService>()
                 .AsSingle()
                 .NonLazy();
-
 
             Container
                 .Bind<InputService>()

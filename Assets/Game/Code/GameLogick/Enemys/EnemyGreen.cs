@@ -1,4 +1,4 @@
-namespace Game.Code.GameLogick
+namespace Game.Code.GameLogick.Enemys
 {
     public class EnemyGreen : Enemy
     {
