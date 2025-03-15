@@ -7,14 +7,14 @@ namespace Game.Code.Infrastructure.Main
 {
     public class GameStateListenerComposit : MonoBehaviour, IGameStartListener, IGamePauseListener, IGameResumListener, IGameFinishListener
     {
-        [Inject] private readonly GameManager _gameManager;
+        [Inject] private readonly GameStateManager _gameStateManager;
         
         [InjectLocal]
         private List<IGameStateListener> _listeners = new();
 
-        private void Start() => _gameManager.AddListener(this);
+        private void Start() => _gameStateManager.AddListener(this);
 
-        private void OnDestroy() => _gameManager.RemoveListener(this); 
+        private void OnDestroy() => _gameStateManager.RemoveListener(this); 
 
         public void OnStartGame()
         {

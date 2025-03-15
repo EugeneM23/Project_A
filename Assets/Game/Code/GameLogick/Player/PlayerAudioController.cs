@@ -1,7 +1,6 @@
 using FMOD.Studio;
 using Game.Code.Infrastructure.Main;
 using Game.Code.Infrastructure.Services;
-using Game.Code.Infrastructure.Systems;
 using Game.Code.SoundSystem;
 using UnityEngine;
 using Zenject;

@@ -4,7 +4,7 @@ using UnityEngine;
 
 namespace Game.Code.Infrastructure.Main
 {
-    public class GameManager
+    public class GameStateManager
     {
         public event Action OnGameStart;
         public event Action OnGameFinished;

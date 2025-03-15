@@ -41,12 +41,12 @@ namespace Game.Code.Infrastructure.Installers
                 .NonLazy();
             
             Container
-                .BindInterfacesAndSelfTo<GameManager>()
+                .BindInterfacesAndSelfTo<GameStateManager>()
                 .AsSingle()
                 .NonLazy();
             
             Container
-                .BindInterfacesAndSelfTo<GameController>()
+                .BindInterfacesAndSelfTo<GameStateController>()
                 .AsCached()
                 .NonLazy();
             

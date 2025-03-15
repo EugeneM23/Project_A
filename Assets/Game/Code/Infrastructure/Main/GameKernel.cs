@@ -11,13 +11,13 @@ namespace Game.Code.Infrastructure.Main
         [InjectLocal] private List<IGameLateTickable> _lateTickables = new();
         [InjectLocal] private List<IGameFixedTickable> _fixedTickables = new();
 
-        [Inject] private readonly GameManager _gameManager;
+        [Inject] private readonly GameStateManager _gameStateManager;
 
         public override void Update()
         {
             base.Update();
 
-            if (_gameManager.CurrentState != GameState.PLAY) return;
+            if (_gameStateManager.CurrentState != GameState.PLAY) return;
 
             float time = Time.deltaTime;
             foreach (var item in _tickables)
@@ -28,7 +28,7 @@ namespace Game.Code.Infrastructure.Main
         {
             base.LateUpdate();
             
-            if (_gameManager.CurrentState != GameState.PLAY) return;
+            if (_gameStateManager.CurrentState != GameState.PLAY) return;
 
             float time = Time.deltaTime;
             foreach (var item in _lateTickables)
@@ -39,7 +39,7 @@ namespace Game.Code.Infrastructure.Main
         {
             base.FixedUpdate();
             
-            if (_gameManager.CurrentState != GameState.PLAY) return;
+            if (_gameStateManager.CurrentState != GameState.PLAY) return;
 
             float fixedTime = Time.fixedTime;
             foreach (var item in _fixedTickables)

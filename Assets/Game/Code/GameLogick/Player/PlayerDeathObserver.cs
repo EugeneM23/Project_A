@@ -8,18 +8,18 @@ namespace Game.Code.GameLogick.Player
     public class PlayerDeathObserver : IInitializable, IDisposable
     {
         private readonly IPlayer _player;
-        private readonly GameManager _gameManager;
+        private readonly GameStateManager _gameStateManager;
 
-        public PlayerDeathObserver(IPlayer player, GameManager gameManager)
+        public PlayerDeathObserver(IPlayer player, GameStateManager gameStateManager)
         {
             _player = player;
-            _gameManager = gameManager;
+            _gameStateManager = gameStateManager;
         }
 
         public void Initialize() => _player.OnDeath += OnDeath;
         public void Dispose() => _player.OnDeath -= OnDeath;
 
         
-        private void OnDeath() => _gameManager.FinishGame();
+        private void OnDeath() => _gameStateManager.FinishGame();
     }
 }
