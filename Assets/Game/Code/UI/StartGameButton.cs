@@ -1,6 +1,6 @@
 using System;
 using Game.Code.Infrastructure.Systems;
-using UnityEngine;
+using Game.Code.SoundSystem;
 using UnityEngine.UI;
 using Zenject;
 
@@ -10,6 +10,7 @@ namespace Game.Code.UI
     {
         private readonly Button _button;
         private readonly GameLauncher _launcher;
+        private readonly SoundManager _soundManager;
 
         public StartGameButton(Button button, GameLauncher launcher)
         {
@@ -20,6 +21,7 @@ namespace Game.Code.UI
         public void Initialize() => _button.onClick.AddListener(OnButtonClicked);
 
         public void Dispose() => _button.onClick.RemoveListener(OnButtonClicked);
+
         private void OnButtonClicked() => _launcher.StartGame();
     }
 }

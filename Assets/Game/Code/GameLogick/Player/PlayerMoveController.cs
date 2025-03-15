@@ -1,20 +1,19 @@
+using Game.Code.Infrastructure.Main;
 using Game.Code.Infrastructure.Services;
 using UnityEngine;
 using Zenject;
 
 namespace Game.Code.GameLogick.Player
 {
-    public class PlayerMoveController : ITickable, IInitializable
+    public class PlayerMoveController : IGameTickable, IInitializable
     {
         private readonly Transform _playerTransform;
         private readonly InputService _inputService;
         private readonly CharacterController _characterController;
 
-        private UnityEngine.Camera _camera;
+        private Camera _camera;
         private float _speed;
         private float _rotationSpeed;
-
-        public void Initialize() => _camera = UnityEngine.Camera.main;
 
         public PlayerMoveController(IPlayer player, InputService inputService, float speed, float rotationSpeed)
         {
@@ -26,7 +25,9 @@ namespace Game.Code.GameLogick.Player
             _playerTransform = (player as PlayerBase).gameObject.transform;
         }
 
-        public void Tick()
+        public void Initialize() => _camera = UnityEngine.Camera.main;
+
+        public void Tick(float deltaTime)
         {
             var movementVector = Vector3.zero;
             if (_inputService.Axis.sqrMagnitude > 0)

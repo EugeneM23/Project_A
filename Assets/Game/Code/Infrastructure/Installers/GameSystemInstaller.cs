@@ -1,4 +1,4 @@
-using Game.Code.GameLogick.Player;
+using Game.Code.Infrastructure.Main;
 using Game.Code.Infrastructure.Services;
 using Game.Code.Infrastructure.Systems;
 using Game.Code.SoundSystem;
@@ -43,6 +43,11 @@ namespace Game.Code.Infrastructure.Installers
             Container
                 .BindInterfacesAndSelfTo<GameManager>()
                 .AsSingle()
+                .NonLazy();
+            
+            Container
+                .BindInterfacesAndSelfTo<GameController>()
+                .AsCached()
                 .NonLazy();
             
             Container.Bind<ApplycationFinisher>().AsSingle().NonLazy();
