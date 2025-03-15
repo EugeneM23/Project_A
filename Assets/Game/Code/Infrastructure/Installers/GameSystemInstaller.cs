@@ -40,15 +40,8 @@ namespace Game.Code.Infrastructure.Installers
                 .AsSingle()
                 .NonLazy();
             
-            Container
-                .BindInterfacesAndSelfTo<GameStateManager>()
-                .AsSingle()
-                .NonLazy();
-            
-            Container
-                .BindInterfacesAndSelfTo<GameStateController>()
-                .AsCached()
-                .NonLazy();
+          
+          
             
             Container.Bind<ApplycationFinisher>().AsSingle().NonLazy();
             Container.Bind<GameLauncher>().AsSingle().NonLazy();

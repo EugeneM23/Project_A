@@ -1002,6 +1002,7 @@ MonoBehaviour:
   _parentNewObjectsUnderSceneContext: 0
   _contractNames: []
   _parentContractNames: []
+  _kernel: {fileID: 0}
 --- !u!4 &1621140027
 Transform:
   m_ObjectHideFlags: 0

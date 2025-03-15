@@ -15,7 +15,7 @@ namespace Game.Code.Infrastructure.Systems
         public void Tick()
         {
             if (Input.GetKey(KeyCode.Escape)) 
-                _applycationFinisher.FinishGame();
+                _applycationFinisher.ExitApp();
         }
     }
 }

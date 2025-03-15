@@ -25,7 +25,7 @@ namespace Game.Code.UI
         public void Dispose() => _button.onClick.RemoveListener(OnButtonClicked);
         private void OnButtonClicked()
         {
-            _finisher.FinishGame();
+            _finisher.ExitApp();
         }
     }
 }

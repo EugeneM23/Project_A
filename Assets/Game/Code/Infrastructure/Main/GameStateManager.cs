@@ -1,10 +1,11 @@
 using System;
 using System.Collections.Generic;
 using UnityEngine;
+using Zenject;
 
 namespace Game.Code.Infrastructure.Main
 {
-    public class GameStateManager
+    public class GameStateManager : IInitializable
     {
         public event Action OnGameStart;
         public event Action OnGameFinished;
@@ -12,7 +13,7 @@ namespace Game.Code.Infrastructure.Main
         public event Action OnGameResume;
 
         private List<IGameStateListener> _listeners = new();
-        public GameState CurrentState { get; private set; }
+        public GameState CurrentState { get;  set; }
 
         public void AddListener(IGameStateListener listener) => _listeners.Add(listener);
 
@@ -75,6 +76,12 @@ namespace Game.Code.Infrastructure.Main
 
             OnGameFinished?.Invoke();
             Debug.Log("Game finished");
+        }
+
+        public void Initialize()
+        {
+            Debug.Log("Game started");
+            CurrentState = GameState.OFF;
         }
     }
 

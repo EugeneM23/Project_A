@@ -1,3 +1,4 @@
+using Game.Code.Infrastructure.Services;
 using UnityEngine;
 using Zenject;
 
@@ -6,6 +7,7 @@ namespace Game.Code.Infrastructure.Main
     public class GameStateController : ITickable
     {
         private readonly GameStateManager _gameStateManager;
+        private readonly PlayerProgressService _playerProgressService;
 
         public GameStateController(GameStateManager gameStateManager)
         {

@@ -1,6 +1,7 @@
 using System.Collections.Generic;
 using FMOD.Studio;
 using FMODUnity;
+using UnityEngine;
 using Zenject;
 using STOP_MODE = FMOD.Studio.STOP_MODE;
 
@@ -36,6 +37,7 @@ namespace Game.Code.SoundSystem
 
         public void CleanUp()
         {
+            Debug.Log("Sound Manager cleanup");
             foreach (var item in _savedGameEvents)
             {
                 item.stop(STOP_MODE.IMMEDIATE);

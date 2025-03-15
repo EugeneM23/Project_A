@@ -7,10 +7,10 @@ namespace Game.Code.GameLogick.Player
 {
     public class PlayerDeathObserver : IInitializable, IDisposable
     {
-        private readonly IPlayer _player;
+        private readonly PlayerBase _player;
         private readonly GameStateManager _gameStateManager;
 
-        public PlayerDeathObserver(IPlayer player, GameStateManager gameStateManager)
+        public PlayerDeathObserver(PlayerBase player, GameStateManager gameStateManager)
         {
             _player = player;
             _gameStateManager = gameStateManager;

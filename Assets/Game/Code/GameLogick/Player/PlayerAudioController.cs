@@ -17,12 +17,12 @@ namespace Game.Code.GameLogick.Player
         private EventInstance _playerFootStep;
         private bool _isMovable;
 
-        public PlayerAudioController(InputService inputService, SoundManager soundManager, IPlayer player)
+        public PlayerAudioController(InputService inputService, SoundManager soundManager, PlayerBase player)
         {
             _inputService = inputService;
             _soundManager = soundManager;
 
-            _characterController = (player as PlayerBase).gameObject.GetComponent<CharacterController>();
+            _characterController =  player.gameObject.GetComponent<CharacterController>();
         }
 
         public void Initialize() => _playerFootStep = _soundManager.CreateInstance(FMODEvents.FootStepsEvent);

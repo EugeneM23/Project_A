@@ -11,5 +11,8 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Game/Content/Scenes/L_Init.unity
     guid: 479f24544a063439aa51ddbeb4116c8f
+  - enabled: 1
+    path: Assets/Game/Content/Scenes/L_Test.unity
+    guid: 9afd084d4d98b4fe7a8519cff6ad7719
   m_configObjects: {}
   m_UseUCBPForAssetBundles: 0

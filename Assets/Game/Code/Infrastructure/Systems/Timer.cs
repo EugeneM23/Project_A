@@ -5,9 +5,16 @@ namespace Game.Code.Infrastructure.Systems
 {
     public class Timer : IGameTickable
     {
+        private GameStateManager gameStateManager;
+
+        public Timer(GameStateManager gameStateManager)
+        {
+            this.gameStateManager = gameStateManager;
+        }
+
         public void Tick(float deltaTime)
         {
-            Debug.Log("Timer");
+            Debug.Log(gameStateManager.CurrentState);
         }
     }
 }

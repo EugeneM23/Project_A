@@ -1,4 +1,3 @@
-using Game.Code.Infrastructure.Systems;
 using Game.Code.UI;
 using UnityEngine;
 using UnityEngine.UI;
@@ -22,8 +21,6 @@ namespace Game.Code.Infrastructure.Installers
                 .BindInterfacesAndSelfTo<FinishGameButton>()
                 .AsSingle()
                 .WithArguments(_finishButton);
-            
-
         }
     }
 }

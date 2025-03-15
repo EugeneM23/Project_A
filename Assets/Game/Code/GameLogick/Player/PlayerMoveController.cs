@@ -15,14 +15,14 @@ namespace Game.Code.GameLogick.Player
         private float _speed;
         private float _rotationSpeed;
 
-        public PlayerMoveController(IPlayer player, InputService inputService, float speed, float rotationSpeed)
+        public PlayerMoveController(PlayerBase player, InputService inputService, float speed, float rotationSpeed)
         {
             _inputService = inputService;
             _speed = speed;
             _rotationSpeed = rotationSpeed;
 
-            _characterController = (player as PlayerBase).gameObject.GetComponent<CharacterController>();
-            _playerTransform = (player as PlayerBase).gameObject.transform;
+            _characterController = player.gameObject.GetComponent<CharacterController>();
+            _playerTransform = player.gameObject.transform;
         }
 
         public void Initialize() => _camera = UnityEngine.Camera.main;

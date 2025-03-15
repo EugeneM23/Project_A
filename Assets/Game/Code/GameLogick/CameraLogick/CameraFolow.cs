@@ -11,7 +11,7 @@ namespace Game.Code.GameLogick.CameraLogick
         private Vector3 _offset;
         private Transform _target;
         private bool _isMovable;
-        public CameraFolow(IPlayer player) => _target = (player as PlayerBase).gameObject.transform;
+        public CameraFolow(PlayerBase player) => _target =  player.gameObject.transform;
 
         public void Initialize()
         {

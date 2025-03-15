@@ -1,8 +1,7 @@
-using Game.Code.GameLogick;
 using Game.Code.GameLogick.CameraLogick;
 using Game.Code.GameLogick.Player;
+using Game.Code.Infrastructure.Main;
 using UnityEngine;
-using UnityEngine.Serialization;
 using Zenject;
 
 namespace Game.Code.Infrastructure.Installers
@@ -13,10 +12,10 @@ namespace Game.Code.Infrastructure.Installers
 
         public override void InstallBindings()
         {
+            Container.BindInterfacesAndSelfTo<GameSvaLoadController>().AsSingle().NonLazy();
+            
             Container
-                .Bind<IPlayer>()
-                .To<PlayerBase>()
-                .FromComponentInNewPrefab(playerBasePrefab)
+                .Bind<PlayerBase>().FromComponentInNewPrefab(playerBasePrefab)
                 .AsSingle();
 
             Container

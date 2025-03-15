@@ -20,7 +20,6 @@ namespace Game.Code.Infrastructure.Services
             writer.Write(Currentweapon, playerData.CurrentWeapon);
             writer.Write(Level, playerData.Level);
 
-            Debug.Log("ASdasdas");
             writer.Commit();
         }
 
