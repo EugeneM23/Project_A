@@ -20,15 +20,12 @@ namespace Game.Code.Infrastructure.SceneLoadComposite
 
             await loader.LoadLevel();
 
-            // Дожидаемся полной загрузки уровня перед переключением сцены
             await levelStep.WaitUntilSceneLoaded();
 
-            // Переключаем сцену после полной загрузки
             await new SwitchToLevelStep(levelScene).Execute();
             
             GameObject loadingScreenCanvas = GameObject.FindWithTag("LoadingScreen");
             loadingScreenCanvas.SetActive(false);
-            //SceneManager.UnloadSceneAsync(loadingScreen);
         }
     }
 }

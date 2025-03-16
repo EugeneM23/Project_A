@@ -27,7 +27,6 @@ namespace Game.Code.Infrastructure.Installers
                 .AsSingle()
                 .NonLazy();
 
-
             Container
                 .Bind<SceneLoader>()
                 .AsSingle()
@@ -40,12 +39,21 @@ namespace Game.Code.Infrastructure.Installers
                 .AsSingle()
                 .NonLazy();
             
-          
-          
             
-            Container.Bind<ApplycationFinisher>().AsSingle().NonLazy();
-            Container.Bind<GameLauncher>().AsSingle().NonLazy();
-            Container.BindInterfacesTo<GameExitController>().AsSingle().NonLazy();
+            Container
+                .Bind<ApplycationFinisher>()
+                .AsSingle()
+                .NonLazy();
+            
+            Container
+                .Bind<GameLauncher>()
+                .AsSingle()
+                .NonLazy();
+            
+            Container
+                .BindInterfacesTo<GameExitController>()
+                .AsSingle()
+                .NonLazy();
 
         }
     }

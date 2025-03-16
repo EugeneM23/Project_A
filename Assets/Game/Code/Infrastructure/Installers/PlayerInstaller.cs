@@ -12,10 +12,14 @@ namespace Game.Code.Infrastructure.Installers
 
         public override void InstallBindings()
         {
-            Container.BindInterfacesAndSelfTo<GameSvaLoadController>().AsSingle().NonLazy();
+            Container
+                .BindInterfacesAndSelfTo<GameSvaLoadController>()
+                .AsSingle()
+                .NonLazy();
             
             Container
-                .Bind<PlayerBase>().FromComponentInNewPrefab(playerBasePrefab)
+                .Bind<PlayerBase>()
+                .FromComponentInNewPrefab(playerBasePrefab)
                 .AsSingle();
 
             Container

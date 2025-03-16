@@ -19,23 +19,27 @@ namespace Game.Code.GameLogick.Player
             data.PositionOnlevel = transform.position;
             data.CurrentWeapon = CurrentWeapon;
             
-            Debug.Log(data.Level);
-            Debug.Log(data.Health);
-            Debug.Log(data.Level);
-            Debug.Log(data.Level);
-            Debug.Log(data.Level);
+            PrintDebug(data);
             return data;
         }
 
         public void LoadData(PlayerData data)
         {
-            Debug.Log("Asdasdsad");
             Health = data.Health;
             CurrentWeapon = data.CurrentWeapon;
             
             gameObject.GetComponent<CharacterController>().enabled = false;
             transform.position = data.PositionOnlevel;
             gameObject.GetComponent<CharacterController>().enabled = true;
+        }
+
+        private static void PrintDebug(PlayerData data)
+        {
+            Debug.Log(data.Level);
+            Debug.Log(data.Health);
+            Debug.Log(data.Level);
+            Debug.Log(data.Level);
+            Debug.Log(data.Level);
         }
     }
 }
